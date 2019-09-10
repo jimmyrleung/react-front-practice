@@ -9,13 +9,20 @@ interface IOwnProps {
   fullWidth?: boolean;
   disabled?: boolean;
   color?: string;
+  onClick?(): void;
 }
 
 export const Button: React.FC<IOwnProps> = (props) => {
   const className = `common-button ${props.color || 'default'} ${props.className || ''} ${props.fullWidth ? 'full-width' : ''}`;
 
+  const onClick = () => {
+    if (props.onClick) {
+      props.onClick();
+    }
+  }
+
   return (
-    <button disabled={props.disabled || false} className={className}>
+    <button onClick={onClick} disabled={props.disabled || false} className={className}>
       {props.children}
     </button >
   );

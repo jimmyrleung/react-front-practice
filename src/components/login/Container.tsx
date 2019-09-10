@@ -1,8 +1,29 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import './Login.css';
 import { Card, CardSection, Label, Input, Button } from '../common';
+import { useLogin } from '../../hooks';
 
 export const LoginContainer: FC = () => {
+  const [loginResult, callLogin] = useLogin();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  useEffect(() => {
+
+    // Unmount
+    return () => {
+      setEmail('');
+      setPassword('');
+    }
+  }, []);
+
+  const login = () => {
+    // TODO: Real validation
+    if (email && password) {
+      callLogin({ email, password });
+    }
+  };
+
   return (
     <div className='login-container login-bg'>
       <div className='flex-wrapped full-width flex-justify-center'>
@@ -17,17 +38,37 @@ export const LoginContainer: FC = () => {
           </CardSection>
           <CardSection wrapped fullWidth>
             <Label labelFor='login-email' text='E-mail' />
-            <Input fullWidth type='text' id='login-email' />
+            <Input
+              fullWidth
+              type='text'
+              id='login-email'
+              value={email}
+              onChange={(value) => setEmail(value)}
+            />
           </CardSection>
           <CardSection wrapped fullWidth>
             <Label labelFor='login-password' text='Password' />
-            <Input fullWidth type='password' id='login-password' />
+            <Input
+              fullWidth
+              type='password'
+              id='login-password'
+              value={password}
+              onChange={(value) => setPassword(value)}
+              onKeyPress={(e) => e.key === 'Enter' && login()}
+            />
           </CardSection>
           <CardSection wrapped fullWidth>
-            <Button className='login-card-button' fullWidth>Login</Button>
+            <Button
+              disabled={loginResult.loading}
+              onClick={login}
+              className='login-card-button'
+              fullWidth
+            >
+              {loginResult.loading ? 'Logging in...' : 'Login'}
+            </Button>
           </CardSection>
           <CardSection wrapped fullWidth className='flex-justify-center'>
-            <a href="#">Esqueci minha senha</a>
+            <a href="#">Forgot Password</a>
           </CardSection>
         </Card>
       </div>
