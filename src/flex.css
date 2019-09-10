@@ -5,6 +5,15 @@
   flex-wrap: wrap;
 }
 
+.flex-wrapped {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.full-width {
+  width: 100%;
+}
+
 .flex-row {
   margin-left: -10px;
   margin-right: -10px;

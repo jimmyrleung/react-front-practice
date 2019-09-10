@@ -7,56 +7,34 @@
 .login-bg {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right,#667db6 ,#0082c8, #0082c8, #667db6), url('../../assets/imgs/login-bg.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url('../../assets/imgs/login-bg.png');
   background-size: cover;
-  opacity: .8;
+  background-repeat: no-repeat;
 }
 .login-card {
-  margin: 50px;
-    padding: 50px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin: 40px;
+    padding: 40px;
+    max-height: 450px;
+    align-self: center;
 }
 .login-card-title {
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: #676767;
+  font-weight: 500;
 }
-.login-card-label {
-  font-size: 1em;
-  color: #676767;
-  font-weight: bold;
+.login-card-separator {
+  border-bottom: 1px solid #b3b3b3;
+  flex: 1;
+  align-self: center;
+  margin: 0px 20px;
+  padding: 5px;
+  color: #b3b3b3;
 }
-.login-card-input {
-  width: 100%;
-  padding: 12px;
-  font-size: 1em;
-  border: 1.25px solid #b3b3b3;
-  border-radius: 20px;
-  margin: 10px auto;
-  color: #676767;
+.login-card-separator-character {
+ font-size: 1.75em;
+ align-self: center;
+ color: #b3b3b3;
 }
 .login-card-button {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  font-size: 1em;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: #b3b3b3;
-  font-weight: bold;
-  margin: 10px 0;
-}
-.login-card-button:hover{
-  background-color: #636363;
-  transition: 0.5s;
-  color: #fff;
-}
-
-.form-row {
-  flex: calc(100% - 20px);
-  max-width: calc(100% - 20px);
-  margin: 0 10px;
+  margin: 10px;
 }

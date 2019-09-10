@@ -1,0 +1,22 @@
+.common-button {
+  padding: 15px;
+  border: none;
+  font-size: 0.75em;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.common-button:disabled {
+  cursor: auto;
+  background-color: #b3b3b3;
+  color: #636363;
+}
+.common-button.default {
+  background-color: #b3b3b3;
+}
+.common-button.default:hover:enabled {
+  background-color: #636363;
+  transition: 0.5s;
+  color: #fff;
+}
+
