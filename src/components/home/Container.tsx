@@ -1,9 +1,14 @@
 import React from 'react';
+import { withAuthentication } from '../../hocs';
 
-const HomeContainer: React.FC = () => {
+const HomeContainerComponent: React.FC = () => {
   return (
     <h1>Home</h1>
   );
 };
 
-export { HomeContainer };
+const HomeContainer = withAuthentication(HomeContainerComponent);
+
+export {
+  HomeContainer,
+};
