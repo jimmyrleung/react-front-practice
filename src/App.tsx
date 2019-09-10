@@ -1,9 +1,10 @@
 import React from 'react';
-import { LoginContainer } from './components/login';
+// import { LoginContainer } from './components/login';
+import AppRoutes from './components/AppRoutes';
 
 const App: React.FC = () => {
   return (
-    <LoginContainer />
+    <AppRoutes />
   );
 }
 

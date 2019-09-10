@@ -2,20 +2,25 @@ import React, { FC, useState, useEffect } from 'react';
 import './Login.css';
 import { Card, CardSection, Label, Input, Button } from '../common';
 import { useLogin } from '../../hooks';
+import { Session } from '../../util';
+import { BrowserRouterProps, RouteComponentProps } from 'react-router-dom';
 
-export const LoginContainer: FC = () => {
+export const LoginContainer: FC<RouteComponentProps> = (props) => {
   const [loginResult, callLogin] = useLogin();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   useEffect(() => {
+    if (Session.isValid()) {
+      props.history.replace('/');
+    }
 
     // Unmount
     return () => {
       setEmail('');
       setPassword('');
     }
-  }, []);
+  }, [loginResult.data]);
 
   const login = () => {
     // TODO: Real validation
