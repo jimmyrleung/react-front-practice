@@ -2,6 +2,9 @@
 
 Front-end practice with ReactJS 🔥
 
+## Setup
+I've used [express-base-api](https://github.com/jimmyrleung/express-base-api) as back-end service, so if you want to run this project rightly you should run the api too (don't worry, it's very easy to set the api up).
+
 ## Already implemented
 
 * Full react-hooks structure (functional components only and custom hooks)
