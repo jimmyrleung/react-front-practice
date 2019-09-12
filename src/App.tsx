@@ -4,7 +4,9 @@ import AppRoutes from './components/AppRoutes';
 
 const App: React.FC = () => {
   return (
-    <AppRoutes />
+    <>
+      <AppRoutes />
+    </>
   );
 }
 

@@ -1,0 +1,12 @@
+.common-separator {
+  border-bottom: 1px solid #b3b3b3;
+  flex: 1;
+  align-self: center;
+  margin: 0px 20px;
+  padding: 5px;
+}
+.common-separator-character {
+ font-size: 1.75em;
+ align-self: center;
+ color: #b3b3b3;
+}

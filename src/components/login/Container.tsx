@@ -1,9 +1,9 @@
 import React, { FC, useState, useEffect } from 'react';
-import './Login.css';
-import { Card, CardSection, Label, Input, Button } from '../common';
+import { RouteComponentProps } from 'react-router-dom';
+import './index.css';
+import { Card, CardSection, Label, Input, Button, Separator } from '../common';
 import { useLogin } from '../../hooks';
 import { Session } from '../../util';
-import { BrowserRouterProps, RouteComponentProps } from 'react-router-dom';
 
 export const LoginContainer: FC<RouteComponentProps> = (props) => {
   const [loginResult, callLogin] = useLogin();
@@ -37,9 +37,7 @@ export const LoginContainer: FC<RouteComponentProps> = (props) => {
             <p className='login-card-title default-colored'>Login</p>
           </CardSection>
           <CardSection wrapped fullWidth className='flex-justify-center'>
-            <span className='login-card-separator'></span>
-            <span className='login-card-separator-character'>•</span>
-            <span className='login-card-separator'></span>
+            <Separator text='•' />
           </CardSection>
           <CardSection wrapped fullWidth>
             <Label labelFor='login-email' text='E-mail' />
