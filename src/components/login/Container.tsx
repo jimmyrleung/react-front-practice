@@ -68,6 +68,7 @@ export const LoginContainer: FC<RouteComponentProps> = (props) => {
               onClick={login}
               className='login-card-button'
               fullWidth
+              color='green'
             >
               {loginResult.loading ? 'Logging in...' : 'Login'}
             </Button>

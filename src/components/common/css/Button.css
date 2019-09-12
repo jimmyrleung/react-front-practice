@@ -5,18 +5,31 @@
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+  color: #fff;
+  opacity: 0.9;
 }
 .common-button:disabled {
   cursor: auto;
   background-color: #b3b3b3;
   color: #636363;
 }
-.common-button.default {
-  background-color: #b3b3b3;
-}
-.common-button.default:hover:enabled {
+.common-button.default:enabled {
   background-color: #636363;
+}
+.common-button.blue:enabled {
+  background-color: #457fca;
+}
+.common-button.red:enabled {
+  background-color: #db2828;
+}
+.common-button.green:enabled {
+  background-color: #21ba45;
+}
+.common-button.yellow:enabled {
+  background-color: #eaae00;
+}
+.common-button:hover:enabled {
   transition: 0.5s;
-  color: #fff;
+  opacity: 1;
 }
 
