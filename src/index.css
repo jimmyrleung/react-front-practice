@@ -52,3 +52,20 @@ code {
   max-width: calc(100% - 20px);
   margin: 0 10px;
 }
+
+/* Colors */ 
+.default-colored {
+  color: #636363;
+}
+.blue-colored {
+  color: #457fca;
+}
+.red-colored {
+  color: #db2828;
+}
+.green-colored {
+  color: #21ba45;
+}
+.yellow-colored {
+  color: #eaae00;
+}

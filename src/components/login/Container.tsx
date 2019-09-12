@@ -34,7 +34,7 @@ export const LoginContainer: FC<RouteComponentProps> = (props) => {
       <div className='flex-wrapped full-width flex-justify-center'>
         <Card className='login-card'>
           <CardSection wrapped fullWidth className='flex-justify-center'>
-            <p className='login-card-title'>Login</p>
+            <p className='login-card-title default-colored'>Login</p>
           </CardSection>
           <CardSection wrapped fullWidth className='flex-justify-center'>
             <span className='login-card-separator'></span>
@@ -68,7 +68,7 @@ export const LoginContainer: FC<RouteComponentProps> = (props) => {
               onClick={login}
               className='login-card-button'
               fullWidth
-              color='green'
+              color='blue'
             >
               {loginResult.loading ? 'Logging in...' : 'Login'}
             </Button>

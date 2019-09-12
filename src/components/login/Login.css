@@ -19,7 +19,6 @@
 }
 .login-card-title {
   font-size: 1.25em;
-  color: #676767;
   font-weight: 500;
 }
 .login-card-separator {
@@ -28,7 +27,6 @@
   align-self: center;
   margin: 0px 20px;
   padding: 5px;
-  color: #b3b3b3;
 }
 .login-card-separator-character {
  font-size: 1.75em;
