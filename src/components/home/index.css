@@ -27,6 +27,7 @@
   align-self: center;
   color: #fff;
   padding: 20px;
+  cursor: pointer;
 }
 .menu-item.active {
   text-shadow: -1px -1px 5px rgba(74,147,236,0.53), 1px 1px 5px rgba(255,255,255,1);

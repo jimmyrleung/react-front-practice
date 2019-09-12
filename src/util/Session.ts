@@ -20,7 +20,7 @@ const get = () => {
   }
 }
 
-const clean = () => {
+const clear = () => {
   if (!!get()) {
     sessionKey && localStorage.removeItem(sessionKey);
   }
@@ -46,6 +46,6 @@ export const Session = {
   set,
   get,
   isValid,
-  clean,
+  clear,
   payload,
 }
