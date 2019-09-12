@@ -51,6 +51,12 @@
   font-size: 1em;
   font-weight: 500;
   color: #db2828;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.todo-header-remove:hover {
+  opacity: 1;
+  transition: 0.4s;
 }
 .todo-content-text {
   font-size: 0.8em;

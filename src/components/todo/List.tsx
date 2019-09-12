@@ -87,7 +87,7 @@ export const TodoList: React.FC = () => {
           </div>
           <p className='todo-content-text'><em>Do all the dishes</em></p>
         </Card>
-        
+
       </CardSection>
     </Card >
   )
