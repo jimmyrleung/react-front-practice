@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { IRequestHook, ILoginParams } from '../interfaces';
 import { loginService } from '../services';
 import { Session } from '../util';

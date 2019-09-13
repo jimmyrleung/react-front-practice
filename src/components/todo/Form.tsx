@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
-import { Card, CardSection, Separator, Label, Input, Button } from '../common';
 import './index.css';
+import { Card, CardSection, Separator, Label, Input, Button } from '../common';
+import { ITodoParams } from '../../interfaces';
 
-export const TodoForm: React.FC = () => {
+interface IOwnProps {
+  isSending: boolean;
+  create(params: ITodoParams): void;
+}
+
+export const TodoForm: React.FC<IOwnProps> = ({ create, isSending }) => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
+
+  const onCreateClick = () => {
+    if (name && description) {
+      create({ name, description });
+    }
+  };
 
   return (
     <Card className='todo-form-card'>
@@ -32,18 +44,18 @@ export const TodoForm: React.FC = () => {
           id='todo-description'
           value={description}
           onChange={(value) => setDescription(value)}
-        // onKeyPress={(e) => e.key === 'Enter' && login()}
+          onKeyPress={(e) => e.key === 'Enter' && onCreateClick()}
         />
       </CardSection>
       <CardSection wrapped fullWidth>
         <Button
-          // disabled={loginResult.loading}
-          // onClick={login}
+          disabled={isSending}
+          onClick={onCreateClick}
           className='login-card-button'
           fullWidth
           color='blue'
-        >Create
-              {/* {loginResult.loading ? 'Logging in...' : 'Login'} */}
+        >
+          {isSending ? 'Sending...' : 'Create'}
         </Button>
       </CardSection>
     </Card>
